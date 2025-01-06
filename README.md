@@ -1,70 +1,170 @@
-# Getting Started with Create React App
+**MoneyMate - Personal Finance Management System**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MoneyMate is a full-stack financial management platform designed to help users efficiently manage their personal finances. It enables users to track expenses, set budgets, monitor financial goals, and gain actionable insights into their spending habits. The application focuses on providing a secure, user-friendly experience with modern design and AI-powered features.
 
-## Available Scripts
+**Features**
 
-In the project directory, you can run:
+Core Features:
 
-### `npm start`
+Expense Tracking: Record daily expenses with categories, descriptions, and dates.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Budget Management: Set and track budgets with real-time updates on remaining amounts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Goals Tracking: Define savings goals and monitor progress.
 
-### `npm test`
+Financial Reports: Generate visual insights into spending patterns using charts and graphs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Advanced Features:
 
-### `npm run build`
+AI-Powered Insights: Leverage AI tools (e.g., Hugging Face) to provide budget recommendations and spending analysis.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Role-Based Access Control: Secure authentication with JWT and role-based permissions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Modern UI/UX: Built with ReactJS, combining Bootstrap and Tailwind CSS for a responsive, attractive interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Technology Stack**
 
-### `npm run eject`
+Backend:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Spring Boot: REST API development, user authentication, and role-based access control.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+MySQL: Database for managing user, expense, budget, and goal data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Frontend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ReactJS: Dynamic and responsive user interface.
 
-## Learn More
+Bootstrap & Tailwind CSS: Pre-built components and customized styling.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Chart.js: Visualization of financial insights and spending trends.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**AI Integration:**
 
-### Code Splitting
+Hugging Face: AI models for personalized financial advice and insights.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Tools:**
 
-### Analyzing the Bundle Size
+Postman: API testing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+IntelliJ IDEA: Development environment.
 
-### Making a Progressive Web App
+MySQL Workbench: Database management.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Installation
 
-### Advanced Configuration
+Prerequisites:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Java 17+
 
-### Deployment
+Node.js 16+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MySQL Server
 
-### `npm run build` fails to minify
+Maven
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Backend Setup:**
+
+Clone the repository:
+
+git clone https://github.com/yourusername/moneymate.git
+cd moneymate/backend
+
+**Configure application.properties:**
+
+spring.datasource.url=jdbc:mysql://localhost:3306/moneymate
+spring.datasource.username=<your_mysql_username>
+spring.datasource.password=<your_mysql_password>
+spring.jpa.hibernate.ddl-auto=update
+
+**Build and run the backend:**
+
+mvn clean install
+mvn spring-boot:run
+
+**Frontend Setup:**
+
+Navigate to the frontend directory:
+
+cd moneymate/frontend
+
+Install dependencies:
+
+npm install
+
+Start the frontend:
+
+npm start
+
+API Endpoints
+
+Authentication:
+
+POST /api/auth/register: User registration.
+
+POST /api/auth/login: User login.
+
+Expense Management:
+
+GET /api/expenses: Retrieve all expenses.
+
+POST /api/expenses: Add a new expense.
+
+PUT /api/expenses/{id}: Update an expense.
+
+DELETE /api/expenses/{id}: Delete an expense.
+
+Budget Management:
+
+GET /api/budgets: Retrieve all budgets.
+
+POST /api/budgets: Add a new budget.
+
+Goals:
+
+GET /api/goals: Retrieve all goals.
+
+POST /api/goals: Add a new goal.
+
+Screenshots
+
+Dashboard
+
+A modern dashboard that provides:
+
+Summary of expenses, budgets, and goals.
+
+Insights from financial reports.
+
+Expense Tracker
+
+Add, edit, or delete expenses and view categorized transactions.
+
+Budget Planner
+
+Set budgets with timelines and track remaining amounts.
+
+Financial Reports
+
+Interactive charts for spending patterns and category breakdowns.
+
+Contribution
+
+Contributions are welcome! Follow these steps:
+
+Fork the repository.
+
+Create a new branch:
+
+git checkout -b feature-name
+
+Commit your changes:
+
+git commit -m "Add your message here"
+
+Push the branch:
+
+git push origin feature-name
+
+Open a pull request.
+
+
