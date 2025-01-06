@@ -1,0 +1,153 @@
+.confirmation-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.confirmation-modal {
+  background: white;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+.confirmation-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.confirmation-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.danger .icon-wrapper {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.warning .icon-wrapper {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.info .icon-wrapper {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.confirmation-content {
+  padding: 1.5rem;
+}
+
+.confirmation-content p {
+  margin: 0 0 1rem;
+  color: #4b5563;
+}
+
+.item-details {
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.item-details p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.confirmation-actions {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+/* Dark Mode Styles */
+.dark-mode .confirmation-modal {
+  background: #1f2937;
+}
+
+.dark-mode .confirmation-header {
+  border-color: #374151;
+}
+
+.dark-mode .confirmation-header h3 {
+  color: #f1f5f9;
+}
+
+.dark-mode .confirmation-content p {
+  color: #9ca3af;
+}
+
+.dark-mode .item-details {
+  background: #374151;
+}
+
+.dark-mode .confirmation-actions {
+  border-color: #374151;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .confirmation-modal {
+    margin: 1rem;
+  }
+} 

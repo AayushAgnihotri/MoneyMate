@@ -1,0 +1,273 @@
+/* Bill Reminders Styles */
+.bill-reminders {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bills-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.bill-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.upcoming {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* AI Insights Styles */
+.ai-insights {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.ai-insights .section-header {
+  margin-bottom: 2rem;
+}
+
+.ai-insights .header-left h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-insights .header-left h2 i {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+}
+
+.ai-insights .subtitle {
+  color: var(--gray-color);
+  margin: 0;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: white;
+  border: 1px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card.positive {
+  border-color: #198754;
+  background: linear-gradient(to right bottom, #ffffff, #f8fff9);
+}
+
+.insight-card.negative {
+  border-color: #dc3545;
+  background: linear-gradient(to right bottom, #ffffff, #fff8f8);
+}
+
+.insight-card.warning {
+  border-color: #ffc107;
+  background: linear-gradient(to right bottom, #ffffff, #fffbf0);
+}
+
+.insight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.insight-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.insight-card.positive .insight-icon {
+  background: rgba(25, 135, 84, 0.1);
+  color: #198754;
+}
+
+.insight-card.negative .insight-icon {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.insight-card.warning .insight-icon {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.insight-badge {
+  padding: 0.5rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.insight-card.positive .insight-badge {
+  background: rgba(25, 135, 84, 0.1);
+  color: #198754;
+}
+
+.insight-card.negative .insight-badge {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.insight-card.warning .insight-badge {
+  background: rgba(255, 193, 7, 0.1);
+  color: #856404;
+}
+
+.insight-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.insight-content p {
+  color: var(--gray-color);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.insight-action {
+  padding: 0;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.insight-action:hover {
+  text-decoration: none;
+}
+
+.insight-action i {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.insight-action:hover i {
+  transform: translateX(4px);
+}
+
+/* Financial Reports Styles */
+.financial-reports {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.report-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.summary-stats {
+  display: grid;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-breakdown {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.category-item {
+  margin-bottom: 1rem;
+}
+
+.progress {
+  height: 0.5rem;
+  background: #e2e8f0;
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .report-controls {
+    flex-direction: column;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+} 

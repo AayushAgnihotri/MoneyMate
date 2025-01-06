@@ -1,0 +1,161 @@
+.settings-page {
+  min-height: 100vh;
+  background: 
+    linear-gradient(120deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.1) 100%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.1) 0%, transparent 40%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.settings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.settings-header {
+  margin-bottom: 2rem;
+}
+
+.settings-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.settings-header p {
+  color: var(--gray-color);
+  margin-top: 0.5rem;
+}
+
+.settings-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.settings-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--dark-color);
+}
+
+.settings-section p {
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+}
+
+.currency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.currency-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.currency-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.currency-card.active {
+  border-color: var(--primary-color);
+  background: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.currency-symbol {
+  width: 48px;
+  height: 48px;
+  background: rgba(var(--primary-color-rgb), 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.currency-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+.currency-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+
+.currency-selected {
+  position: absolute;
+  right: 1rem;
+  color: var(--primary-color);
+}
+
+/* Dark mode styles */
+.dark-mode .settings-page {
+  background: 
+    linear-gradient(120deg, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 1) 100%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.15) 0%, transparent 40%);
+}
+
+.dark-mode .settings-container {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.dark-mode .settings-section,
+.dark-mode .currency-card {
+  background: var(--dark-card-bg);
+  border-color: var(--dark-border);
+}
+
+.dark-mode .currency-card.active {
+  background: rgba(var(--primary-color-rgb), 0.15);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    color: white;
+}
+
+.loading-overlay .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+} 

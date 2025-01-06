@@ -1,0 +1,52 @@
+.metric-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.metric-label {
+    color: #718096;
+    font-size: 0.875rem;
+}
+
+.progress-container {
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 0.5rem;
+    background: #e2e8f0;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 0.25rem;
+    transition: width 0.3s ease;
+}
+
+/* Dark mode */
+.dark-mode .metric-card {
+    background: #2d3748;
+}
+
+.dark-mode .metric-label {
+    color: #a0aec0;
+}
+
+.dark-mode .progress-bar {
+    background: #4a5568;
+} 

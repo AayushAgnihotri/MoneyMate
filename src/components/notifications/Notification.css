@@ -1,0 +1,17 @@
+.Toastify__toast {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.Toastify__toast--success {
+    background-color: #38a169; /* Green */
+}
+
+.Toastify__toast--error {
+    background-color: #e53e3e; /* Red */
+}
+
+.Toastify__toast--info {
+    background-color: #3182ce; /* Blue */
+} 
